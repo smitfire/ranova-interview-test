@@ -1,39 +1,65 @@
-# Ranova Coding Interview
+# Ranova Technical Interview Test
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://gitlab.com/data-island/feedback/technical-test)
-
-Welcome! This is a live coding interview where we'll work through some challenges together.
+Welcome to the Ranova technical interview! This test consists of Python and React challenges designed to assess your programming skills.
 
 ## Getting Started
 
-1. Your interviewer has shared a Gitpod link with you
-2. Click "Open in Gitpod" to launch the environment
-3. Wait for the environment to fully load
-4. You should see two challenge files open in tabs
+### 🚀 Quick Start (Recommended)
+Click the button below to launch the pre-configured environment:
 
-## What to Expect
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/smitfire/ranova-interview-test)
 
-- We'll discuss your experience and technical knowledge
-- We'll review and improve existing code together
-- We'll add new features to demonstrate your skills
-- Feel free to ask questions and think out loud
+Once Gitpod loads, you'll find:
+- `challenges/python_challenge.py` - Python coding challenge
+- `challenges/react_challenge.tsx` - React coding challenge
 
-## Challenge Files
+Both files will open automatically with instructions inside.
+
+### 💻 Local Setup (Alternative)
+If you prefer to work locally:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/smitfire/ranova-interview-test.git
+   cd ranova-interview-test
+   ```
+
+2. Python setup:
+   ```bash
+   cd backend
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
+
+3. React setup:
+   ```bash
+   cd challenges
+   npm install
+   ```
+
+## 📋 Test Structure
 
 1. **Python Challenge** (`challenges/python_challenge.py`)
-   - Review analytics code
-   - We'll discuss, improve, and extend it together
+   - Review analyzer class to understand and improve
+   - Add new functionality
+   - Focus on code quality and error handling
 
 2. **React Challenge** (`challenges/react_challenge.tsx`)
-   - Review list component
-   - We'll fix issues and add features together
+   - Review list component to debug and enhance
+   - Add interactive features
+   - Focus on React best practices and state management
 
-## Tips
+## ⏱️ Time Expectation
+- This test is designed to be completed during a live interview session
+- Each challenge should take approximately 20-30 minutes
+- Focus on code quality over speed
 
-- Take your time to understand the code
+## 💡 Tips
+- Read the instructions carefully in each file
+- Think out loud - we want to understand your thought process
 - Ask questions if something is unclear
-- Explain your thinking as you work
-- It's okay to look up syntax if needed
-- Focus on demonstrating your problem-solving approach
+- Focus on writing clean, maintainable code
+- Consider edge cases and error handling
 
-Good luck!
+Good luck! We look forward to seeing your solutions.

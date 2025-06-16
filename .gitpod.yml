@@ -3,12 +3,7 @@ image: gitpod/workspace-full
 tasks:
   - name: Prepare Interview Environment
     init: |
-      # Remove interviewer-only files
-      rm -f INTERVIEWER_GUIDE.md
-      rm -f JUNIOR_MID_DEVELOPER_INTERVIEW_GUIDE.md
-      # Remove answer files
-      rm -rf answers/
-      echo "Interview environment prepared - sensitive files removed"
+      echo "Interview environment ready!"
       
   - name: Backend Setup
     init: |
@@ -39,8 +34,8 @@ tasks:
       echo ""
       echo "Please open the challenges folder to begin."
       echo ""
-      echo "1. Python Challenge: challenges/python_challenge.py"
-      echo "2. React Challenge: challenges/react_challenge.tsx"
+      echo "1. Python Challenge: python_challenge.py"
+      echo "2. React Challenge: react_challenge.tsx"
       echo ""
       echo "Follow the instructions in each file."
       gp open python_challenge.py
