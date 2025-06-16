@@ -1,0 +1,62 @@
+image: gitpod/workspace-full
+
+tasks:
+  - name: Prepare Interview Environment
+    init: |
+      # Remove interviewer-only files
+      rm -f INTERVIEWER_GUIDE.md
+      rm -f JUNIOR_MID_DEVELOPER_INTERVIEW_GUIDE.md
+      # Remove answer files
+      rm -rf answers/
+      echo "Interview environment prepared - sensitive files removed"
+      
+  - name: Backend Setup
+    init: |
+      cd backend
+      python -m venv venv
+      source venv/bin/activate
+      pip install -r requirements.txt
+    command: |
+      cd backend
+      source venv/bin/activate
+      echo "Backend environment ready. Python $(python --version)"
+      
+  - name: Frontend Setup
+    init: |
+      cd frontend
+      npm install
+      cd ../challenges
+      npm install
+    command: |
+      cd frontend
+      echo "Frontend environment ready. Node $(node --version)"
+      
+  - name: Challenges
+    command: |
+      cd challenges
+      echo "Welcome to the Ranova Coding Test!"
+      echo "=================================="
+      echo ""
+      echo "Please open the challenges folder to begin."
+      echo ""
+      echo "1. Python Challenge: challenges/python_challenge.py"
+      echo "2. React Challenge: challenges/react_challenge.tsx"
+      echo ""
+      echo "Follow the instructions in each file."
+      gp open python_challenge.py
+      gp open react_challenge.tsx
+
+ports:
+  - port: 3000
+    onOpen: ignore
+    visibility: public
+  - port: 8000
+    onOpen: ignore
+    visibility: public
+
+vscode:
+  extensions:
+    - ms-python.python
+    - dbaeumer.vscode-eslint
+    - esbenp.prettier-vscode
+    - bradlc.vscode-tailwindcss
